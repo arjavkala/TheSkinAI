@@ -15,8 +15,8 @@ The Skin AI is a free skincare AI tool that provides personalized skincare ingre
 
 ## Technologies Used
 
-- HTML5
-- CSS3 (with custom variables, flexbox, and grid layout)
+- HTML
+- CSS3
 - JavaScript 
 - Gen AI and LLM model
 - Responsive design principles
