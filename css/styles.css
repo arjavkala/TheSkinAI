@@ -278,39 +278,83 @@ nav ul li {
 
 /* Advantages Section */
 .advantages {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.advantages h2 {
     text-align: center;
-    background-color: var(--background-dark);
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.mission-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.mission-statement {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
 }
 
 .advantage-grid {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .advantage-card {
-    flex: 1;
-    max-width: 350px;
-    background-color: white;
+    background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px var(--shadow-color);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .advantage-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.icon {
-    width: 60px;
-    height: 60px;
+.advantage-card .icon {
+    width: 64px;
+    height: 64px;
     margin: 0 auto 1.5rem;
 }
 
+.advantage-card .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.advantage-card h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.advantage-card p {
+    text-align: center;
+    color: #666;
+    line-height: 1.5;
+}
+
 .cta-center {
-    margin-top: 3rem;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 /* Ingredients Section */
@@ -472,6 +516,40 @@ footer {
     font-size: 0.9rem;
 }
 
+.footer-social {
+    grid-column: span 3;
+    text-align: center;
+}
+
+.footer-social h4 {
+    font-family: var(--serif-font);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     h1 {
@@ -508,6 +586,11 @@ footer {
         grid-column: span 6;
         margin-top: 2rem;
         text-align: left;
+    }
+    
+    .footer-social {
+        grid-column: span 6;
+        margin-top: 2rem;
     }
 }
 
@@ -550,6 +633,37 @@ footer {
     
     .footer-links li {
         margin: 0.5rem 0;
+    }
+    
+    .footer-social {
+        grid-column: span 1;
+        margin-top: 2rem;
+    }
+    
+    .social-link img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .advantages {
+        padding: 3rem 0;
+    }
+    
+    .mission-title {
+        font-size: 1.5rem;
+    }
+    
+    .mission-statement {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .advantage-grid {
+        gap: 1.5rem;
+    }
+    
+    .advantage-card {
+        padding: 1.5rem;
     }
 }
 
